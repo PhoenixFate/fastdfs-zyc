@@ -152,7 +152,7 @@
 		    $(".performancestorage").each(function(){
 		    	console.log( $(this).attr("val"));
 		    	var toRender = $(this);
-		        $.getJSON('monitor/getPerformanceLine.shtml',{groupName:$(this).attr("val")},function(data){
+		        $.getJSON('${basePath }/monitor/getPerformanceLine.shtml',{groupName:$(this).attr("val")},function(data){
 		        	createPerformanceChart(toRender[0],data);
 		        });
 

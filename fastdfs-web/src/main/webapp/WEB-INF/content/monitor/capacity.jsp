@@ -29,7 +29,7 @@
                 height:200,
                 width:280,events:{
                     click:function(){
-                        navTab.openTab("toStorageInfo","monitor/storageInfo.shtml?ip="+ip,{title:'容量历史'})
+                        navTab.openTab("toStorageInfo","${basePath }/monitor/storageInfo.shtml?ip="+ip,{title:'容量历史'})
                     }
                 }
             },

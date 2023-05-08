@@ -167,7 +167,7 @@ function structureNetTraffic() {
         start:toRender.find('input[name=structure-net-traffic-start-time]').val(),
         end: toRender.find('input[name=structure-net-traffic-end-time ]').val()
     };
-    $.getJSON('monitor/getNetTrafficLine.shtml', params, function (data) {
+    $.getJSON('${basePath }/monitor/getNetTrafficLine.shtml', params, function (data) {
         structureDrawNetTrafficChart(id, title, data);
     });
 }
@@ -230,7 +230,7 @@ function structureForMem() {
     var toRender = $("div.structureServerInfoForperformance");
     var ip = toRender.find('input[name=structureIpForperformance]').val();
     var id = toRender[0];
-    $.getJSON('structure/getForperformanceByIp.shtml', {ip:ip}, function (data) {
+    $.getJSON('${basePath }/structure/getForperformanceByIp.shtml', {ip:ip}, function (data) {
         createPerformanceChartByIpydm(id, data);
     });
 }
@@ -271,7 +271,7 @@ function structureForStorage() {
     var ip = toRender.find('input[name=structureIpForFile]').val();
     var id =toRender[0];
     var name = ip + " " +  toRender.find('input[name=structureFileStatus]').val();
-    $.getJSON('monitor/capactityStorage.shtml?ip=' + ip, function (data) {
+    $.getJSON('${basePath }/monitor/capactityStorage.shtml?ip=' + ip, function (data) {
         createStructureForStorage(id, name, data);
     })
 
@@ -313,7 +313,7 @@ function structureForFileCount() {
     var ip =  toRender.find('input[name=structureIpForFileCount]').val();
     var id = toRender[0];
     var name = ip + " " +toRender.find('input[name=structureFileStatusCount]').val();
-    $.getJSON('monitor/fileCountStorage.shtml?ip='+ip,function(data){
+    $.getJSON('${basePath }/monitor/fileCountStorage.shtml?ip='+ip,function(data){
           createStructureForFileCount(id,name,data);
     });
 }

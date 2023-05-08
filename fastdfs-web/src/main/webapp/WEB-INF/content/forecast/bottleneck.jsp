@@ -62,7 +62,7 @@
         var toRender = $(this);
         var ip = toRender.find('input[name=forForecastIp]').val();
         var status= toRender.find('input[name=statusYdm]').val();
-            $.getJSON('forecast/drawAreaAction.shtml', {ip:ip}, function (data) {
+            $.getJSON('${basePath }/forecast/drawAreaAction.shtml', {ip:ip}, function (data) {
                 drawAreaForForecastByYdm(toRender.find('.bottchart')[0], data, ip+status);
             })
 

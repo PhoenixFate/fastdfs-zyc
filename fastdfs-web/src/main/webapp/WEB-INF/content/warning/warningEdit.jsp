@@ -16,7 +16,7 @@
             <p>
                 <label>服务器IP：</label>
 
-                <input type="text" id="ips" class="required" readonly="true" value="${wdIpAddr}" ${empty wdIpAddr?"suggestUrl='warning/selectIp.shtml'": "readonly='true' style='border:0'"} name="ips"     suggestFields="ips"/>
+                <input type="text" id="ips" class="required" readonly="true" value="${wdIpAddr}" ${empty wdIpAddr?"suggestUrl='${basePath }/warning/selectIp.shtml'": "readonly='true' style='border:0'"} name="ips"     suggestFields="ips"/>
                 <!--<a class="btnLook">查找带回</a>-->
             </p>
             <p>

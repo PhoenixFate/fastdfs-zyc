@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
-<form id="pagerForm" action="warning/warningValue.shtml" method="post">
+<form id="pagerForm" action="${basePath }/warning/warningValue.shtml" method="post">
     <input type="hidden" name="numPerPage" value=" ${pageInfo.numPerPage}" />
     <input type="hidden" name="pageNum"  value=" ${pageInfo.pageNum}" />
 
@@ -28,8 +28,8 @@
 <div class="pageContent">
 <div class="panelBar">
     <ul class="toolBar">
-        <li><a class="add" href="warning/warningEdit.shtml" target="dialog" mask="true" rel="warningEdit"><span>添加</span></a></li>
-        <li><a title="确实要删除这些记录吗?" target="selectedTodo" postType="string"  rel="ids" href="warning/delWarning.shtml" class="delete"><span>批量删除</span></a></li>
+        <li><a class="add" href="${basePath }/warning/warningEdit.shtml" target="dialog" mask="true" rel="warningEdit"><span>添加</span></a></li>
+        <li><a title="确实要删除这些记录吗?" target="selectedTodo" postType="string"  rel="ids" href="${basePath }/warning/delWarning.shtml" class="delete"><span>批量删除</span></a></li>
         <li class="line">line</li>
     </ul>
 </div>
@@ -57,9 +57,9 @@
         <td>${wvs.wdMem}%</td>
         <td>${wvs.wdFreeMB}GB</td>
         <td>
-           <a title="确定要删除吗?" target="ajaxTodo" href="warning/delWarning.shtml?ids=${wvs.id}" class="btnDel">删除</a>
+           <a title="确定要删除吗?" target="ajaxTodo" href="${basePath }/warning/delWarning.shtml?ids=${wvs.id}" class="btnDel">删除</a>
             <%--<a title="删除" id="delWarning" temp="${wvs.id}">删除</a>--%>
-            <a title="编辑" href="warning/warningEdit.shtml?id=${wvs.id}"  target="dialog"  rel="warningEdit" class="btnEdit">编辑</a>
+            <a title="编辑" href="${basePath }/warning/warningEdit.shtml?id=${wvs.id}"  target="dialog"  rel="warningEdit" class="btnEdit">编辑</a>
         </td>
     </tr>
 </c:forEach>

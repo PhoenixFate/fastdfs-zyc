@@ -11,7 +11,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <div class="pageContent">
 
-    <form method="post" action="warning/saveWarUser.shtml" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone);">
+    <form method="post" action="${basePath }/warning/saveWarUser.shtml" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone);">
         <input type="hidden" name="wuid" value="${id}"/>
         <div class="pageFormContent nowrap" layoutH="56">
             <p>

@@ -75,7 +75,7 @@
              var status= toRender.find('input[name=dilstatus]').val();
              var title = ip +" "+toRender.find('input[name=dilstatus]').val()+"扩充容量形势图";
              var params = {ip:ip };
-                  $.getJSON('forecast/getDilatation.shtml',params,function(data){
+                  $.getJSON('${basePath }/forecast/getDilatation.shtml',params,function(data){
                          drawNetTrafficChart(toRender.find('.dilchart')[0],title,data);
                   });
          });

@@ -88,7 +88,7 @@ function drawCapactityStorage(obj,title,data){
     var title = ip +" "+$('.sstatus').val();
     var startTime1 = $('#storage-start-time').val() ; 
     var endTime1 = $('#storage-end-time').val();
-    $.getJSON("monitor/capactityStorage.shtml?ip="+ip+"&startTime="+startTime1+"&endTime="+endTime1,function(data){
+    $.getJSON("${basePath }/monitor/capactityStorage.shtml?ip="+ip+"&startTime="+startTime1+"&endTime="+endTime1,function(data){
         drawCapactityStorage(toRender[0],title,data);
 	});
     b(startTime1,endTime1);
@@ -132,7 +132,7 @@ function drawFileCountStorage(obj,title,data){
 	var toRender1=$(".fileCountStorage");
     var fip = $('.sip').val();
     var ftitle = fip +" "+$('.sstatus').val();
-    $.getJSON("monitor/fileCountStorage.shtml?ip="+fip+"&startTime="+startTime1+"&endTime="+endTime1,function(data){
+    $.getJSON("${basePath }/monitor/fileCountStorage.shtml?ip="+fip+"&startTime="+startTime1+"&endTime="+endTime1,function(data){
         drawFileCountStorage(toRender1[0],ftitle,data);
     });
     }

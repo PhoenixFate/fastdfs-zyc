@@ -162,13 +162,13 @@
         var toRender = $(this);
         var ip = toRender.find('input[name=ipStorageForTen]').val();
 
-        $.getJSON('testModule/tenFileDownLoad.shtml', {ip:ip}, function (data) {
+        $.getJSON('${basePath }/testModule/tenFileDownLoad.shtml', {ip:ip}, function (data) {
             var x=data.x;
             var y=data.y;
             var  total=data.sum;
             drawColumnForTenFile(toRender.find('.chart')[0], ip, x,y, total);
         });
-        $.getJSON('testModule/allFilePie.shtml',{ip:ip},function(data){
+        $.getJSON('${basePath }/testModule/allFilePie.shtml',{ip:ip},function(data){
             drawPieForAllFile(toRender.find('.pieCharts')[0],data,ip);
         })
     });

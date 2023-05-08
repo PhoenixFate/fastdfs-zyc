@@ -10,14 +10,14 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
-<form id="pagerForm" action="warning/warUserList.shtml" method="post">
+<form id="pagerForm" action="${basePath }/warning/warUserList.shtml" method="post">
     <input type="hidden" name="numPerPage" value=" ${pageInfo.numPerPage}" />
     <input type="hidden" name="pageNum"  value=" ${pageInfo.pageNum}" />
 
 </form>
 
 <div class="pageHeader">
-    <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="warning/warUserList.shtml" method="post">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="${basePath }/warning/warUserList.shtml" method="post">
         <div class="searchBar">
             <ul class="searchContent">
                 <li>
@@ -36,8 +36,8 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a class="add" href="warning/warUserAdd.shtml" target="dialog" mask="true" rel="warUserAdd"><span>添加</span></a></li>
-            <li><a title="确实要删除这些记录吗?" target="selectedTodo" postType="string"  rel="ids" href="warning/delWarUser.shtml" class="delete"><span>批量删除</span></a></li>
+            <li><a class="add" href="${basePath }/warning/warUserAdd.shtml" target="dialog" mask="true" rel="warUserAdd"><span>添加</span></a></li>
+            <li><a title="确实要删除这些记录吗?" target="selectedTodo" postType="string"  rel="ids" href="${basePath }/warning/delWarUser.shtml" class="delete"><span>批量删除</span></a></li>
             <li class="line">line</li>
         </ul>
     </div>
@@ -61,7 +61,7 @@
                 <td>${wul.phone}</td>
                 <td>${wul.email}</td>
                 <td>
-                    <a title="确定要删除吗?" target="ajaxTodo" href="warning/delWarUser.shtml?ids=${wul.id}" class="btnDel">删除</a>
+                    <a title="确定要删除吗?" target="ajaxTodo" href="${basePath }/warning/delWarUser.shtml?ids=${wul.id}" class="btnDel">删除</a>
                     <a title="编辑" href="warning/warUserAdd.shtml?id=${wul.id}"  target="dialog"  rel="warUserAdd" class="btnEdit">编辑</a>
                 </td>
             </tr>

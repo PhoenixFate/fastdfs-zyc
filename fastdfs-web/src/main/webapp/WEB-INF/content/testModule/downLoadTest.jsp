@@ -38,7 +38,7 @@
 
             <td><fmt:formatNumber value="${testFileListYdm.fileSize/1024}" pattern="#,###.##" />KB
             </td>
-            <td><a href="testModule/downloadByApi.shtml?fieldId=${testFileListYdm.file_id}&fileName=${testFileListYdm.file_name}" target="_blank">下载文件</a></td>
+            <td><a href="${basePath }/testModule/downloadByApi.shtml?fieldId=${testFileListYdm.file_id}&fileName=${testFileListYdm.file_name}" target="_blank">下载文件</a></td>
 
         </tr>
     </c:forEach>
@@ -63,7 +63,7 @@
         var key = $("#keyForSearch").val();
         var pageNum =${pageNum};
         var pageSize =${pageSize};
-        navTab.openTab("testDownLoad", 'testModule/testDownLoad.shtml?pageNum=' + pageNum + '&&pageSize=' + pageSize + '&&keyForSearch=' + key, { title:'下载测试'});
+        navTab.openTab("testDownLoad", '${basePath }/testModule/testDownLoad.shtml?pageNum=' + pageNum + '&&pageSize=' + pageSize + '&&keyForSearch=' + key, { title:'下载测试'});
 
 
     }

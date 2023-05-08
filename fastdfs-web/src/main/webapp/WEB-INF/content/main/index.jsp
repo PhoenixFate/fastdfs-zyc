@@ -2,25 +2,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <base href="${basePath }" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>fastdfs-zyc 分布式监控管理系统</title>
-    <link href="css/themes/default/style.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="css/themes/css/core.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="css/themes/css/print.css" rel="stylesheet" type="text/css" media="print"/>
+    <link href="${basePath }/css/themes/default/style.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="${basePath }/css/themes/css/core.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="${basePath }/css/themes/css/print.css" rel="stylesheet" type="text/css" media="print"/>
     <!--[if IE]>
-    <link href="css/themes/css/ieHack.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="${basePath }/css/themes/css/ieHack.css" rel="stylesheet" type="text/css" media="screen"/>
     <![endif]-->
-    <script src="js/speedup.js" type="text/javascript"></script>
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery.cookie.js" type="text/javascript"></script>
-    <script src="js/jquery.validate.js" type="text/javascript"></script>
-    <script src="js/jquery.bgiframe.js" type="text/javascript"></script>
-	<script src="js/jsHashMap.js" type="text/javascript"></script>
-    <script src="js/dwz.min.js" type="text/javascript"></script>
-    <script src="js/dwz.regional.zh.js" type="text/javascript"></script>
-    <script src="js/highcharts.js" type="text/javascript"></script>
-    <script src="js/highcharts-more.js" type="text/javascript"></script>
+    <script src="${basePath }/js/speedup.js" type="text/javascript"></script>
+    <script src="${basePath }/js/jquery.min.js" type="text/javascript"></script>
+    <script src="${basePath }/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="${basePath }/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="${basePath }/js/jquery.bgiframe.js" type="text/javascript"></script>
+	<script src="${basePath }/js/jsHashMap.js" type="text/javascript"></script>
+    <script src="${basePath }/js/dwz.min.js" type="text/javascript"></script>
+    <script src="${basePath }/js/dwz.regional.zh.js" type="text/javascript"></script>
+    <script src="${basePath }/js/highcharts.js" type="text/javascript"></script>
+    <script src="${basePath }/js/highcharts-more.js" type="text/javascript"></script>
     <script type="text/javascript">
         Highcharts.setOptions({
             global:{
@@ -32,7 +31,7 @@
             }
         });
         $(function(){
-            DWZ.init("js/dwz.frag.xml", {
+            DWZ.init("${basePath }/js/dwz.frag.xml", {
                 loginUrl:"login_dialog.html", loginTitle:"登录",	// 弹出登录对话框
 //		loginUrl:"login.html",	// 跳到登录页面
                 statusCode:{ok:200, error:300, timeout:301}, //【可选】
@@ -211,7 +210,7 @@
                 <li><a href="http://www.cnblogs.com/dwzjs" target="_blank">博客</a></li>
                 <li><a href="http://weibo.com/dwzui" target="_blank">微博</a></li>
                 <li><a href="http://bbs.dwzjs.com" target="_blank">论坛</a></li>--%>
-                <li><a href="main/loginout.shtml">退出</a></li>
+                <li><a href="${basePath }/main/loginout.shtml">退出</a></li>
             </ul>
 
         </div>
@@ -233,9 +232,9 @@
                 </div>
                 <div class="accordionContent">
                     <ul class="tree">
-                        <li><a href="monitor/performance.shtml" target="navTab"  rel="performance">性能监控</a></li>
-                        <li><a href="monitor/netTraffic.shtml" target="navTab"  rel="netTraffic">流量监控</a></li>
-                        <li><a href="monitor/capacity.shtml" target="navTab"  rel="capacity">容量监控</a></li>
+                        <li><a href="${basePath }/monitor/performance.shtml" target="navTab"  rel="performance">性能监控</a></li>
+                        <li><a href="${basePath }/monitor/netTraffic.shtml" target="navTab"  rel="netTraffic">流量监控</a></li>
+                        <li><a href="${basePath }/monitor/capacity.shtml" target="navTab"  rel="capacity">容量监控</a></li>
 
                     </ul>
                 </div>
@@ -244,8 +243,8 @@
                 </div>
                 <div class="accordionContent">
                     <ul class="tree">
-                        <li><a href="warning/warningValue.shtml" target="navTab" rel="warningValue">预警设置</a></li>
-                        <li><a href="warning/warUserList.shtml" target="navTab" rel="warUserList">通知管理</a></li>
+                        <li><a href="${basePath }/warning/warningValue.shtml" target="navTab" rel="warningValue">预警设置</a></li>
+                        <li><a href="${basePath }/warning/warUserList.shtml" target="navTab" rel="warUserList">通知管理</a></li>
                     </ul>
                 </div>
                 <div class="accordionHeader">
@@ -253,8 +252,8 @@
                 </div>
                 <div class="accordionContent">
                     <ul class="tree">
-                        <li><a href="forecast/bottleneck.shtml" target="navTab" rel="bottleneck">瓶颈预测</a></li>
-                        <li><a href="forecast/dilatation.shtml" target="navTab" rel="dilatation">扩容预测</a></li>
+                        <li><a href="${basePath }/forecast/bottleneck.shtml" target="navTab" rel="bottleneck">瓶颈预测</a></li>
+                        <li><a href="${basePath }/forecast/dilatation.shtml" target="navTab" rel="dilatation">扩容预测</a></li>
                     </ul>
                 </div>
                 <div class="accordionHeader">
@@ -262,9 +261,9 @@
                 </div>
                 <div class="accordionContent">
                     <ul class="tree">
-                        <li><a href="structure/netStructure.shtml" target="navTab" rel="netStructure">网络结构图</a></li>
-                        <li><a href="dataStructure/fileData.shtml" target="navTab" rel="fileData">数据结构图</a></li>
-                        <li><a href="testModule/accessFile.shtml" target="navTab" rel="accessFile">访问拓扑图</a></li>
+                        <li><a href="${basePath }/structure/netStructure.shtml" target="navTab" rel="netStructure">网络结构图</a></li>
+                        <li><a href="${basePath }/dataStructure/fileData.shtml" target="navTab" rel="fileData">数据结构图</a></li>
+                        <li><a href="${basePath }/testModule/accessFile.shtml" target="navTab" rel="accessFile">访问拓扑图</a></li>
                     </ul>
                 </div>
 
@@ -273,7 +272,7 @@
                 </div>
                 <div class="accordionContent" STYLE="${sessionScope.userpower!='2'?'display:none':''}">
                     <ul class="tree">
-                        <li><a href="user/userlist.shtml" target="navTab" rel="userlist">用户列表</a></li>
+                        <li><a href="${basePath }/user/userlist.shtml" target="navTab" rel="userlist">用户列表</a></li>
                     </ul>
                 </div>
                 <div class="accordionHeader">
@@ -281,7 +280,7 @@
                 </div>
                 <div class="accordionContent">
                     <ul class="tree">
-                        <li><a href="testModule/testDownLoad.shtml?pageNum=1&&pageSize=20" target="navTab" rel="testDownLoad">下载测试</a></li>
+                        <li><a href="${basePath }/testModule/testDownLoad.shtml?pageNum=1&&pageSize=20" target="navTab" rel="testDownLoad">下载测试</a></li>
                     </ul>
                     <%--<ul class="tree">--%>
                         <%--<li><a href="monitor/testUpload.shtml" target="navTab" rel="testFileUpload">上传测试</a></li>--%>

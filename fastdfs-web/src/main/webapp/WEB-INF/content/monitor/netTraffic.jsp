@@ -97,7 +97,7 @@ function searchNetTraffic(){
             start:$('#net-traffic-start-time').val(),
             end:$('#net-traffic-end-time').val()
         };
-        $.getJSON('monitor/getNetTrafficLine.shtml',params,function(data){
+        $.getJSON('${basePath }/monitor/getNetTrafficLine.shtml',params,function(data){
             drawNetTrafficChart(toRender.find('.chart')[0],title,data);
         });
     });
